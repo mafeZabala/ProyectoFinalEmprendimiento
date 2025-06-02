@@ -1,0 +1,453 @@
+:root{
+    --letra:'Poppins', sans-serif;
+    --letra1:'Sansita Swashed', cursive;
+    --letra2:'Lobster Two', cursive;
+    --letra3:'Kanit', sans-serif;
+}
+*{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+
+}
+.logo{
+    width: 65px ;
+    height: auto;
+    border-radius: 50%;
+}
+.caja{
+    background-color: #d74bff; 
+}
+
+
+.menuPrincipal{
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #c120e4;
+    /* padding un espacio extra dentro de un elemento */
+    padding: 10px 0;
+}
+.nav-link.active{
+    text-decoration: none;
+    padding: 10px 15px ;
+    color: #ff96ff;
+    font-family: var(--letra);
+    font-weight: 500;
+    /* es mala practica  */
+    font-size: 20px;
+
+}
+.nav-link.active:hover{
+    height: 40px;
+    color: #FFC4C4 ;
+    background-color: #ff96ff;
+    font-size: 1.3rem;
+    padding: 10px 15px ;
+    transition: all 0.5s;
+}
+/* focus es un evento cuando esta seleccionado un input y solo funciona con ellos */
+/* .form-control:focus{
+
+    box-shadow: none;
+    
+} */
+.banner{
+    height: 80vh;
+    position: relative;
+}
+.carousel.slide{
+    height: 100%;
+    
+
+}
+.carosel-img{
+    width: 100vh;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.carousel-inner{
+    height: 100%;
+}
+.banner-text{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+   /*  background-color: #ec2727 */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: rgba(117, 116, 116, 0.632);
+       
+
+}
+.banner-text h3{
+    font-size: 90px;
+    font-family: var(--letra3);
+    /*  */
+    font-weight: bold ;
+    color: #fff;
+    letter-spacing: 10px;
+    text-align: center;
+    animation:  letter forwards 0.9s ease-in-out;
+    
+}
+
+@keyframes letter {
+    100%{
+        letter-spacing: 100px;
+        
+    }
+}
+
+
+.title{
+    text-align: center;
+    margin: 20px 0px;
+    font-family: var(--letra1);
+    color: #c120e4;
+}
+.contenedorCuadros{
+    width: 100%;
+    display: flex;
+    gap: 5px;
+}
+
+.cuadrado{
+    height: 400px;
+    width: 33.33333%;
+    background-color: #c120e4;
+    font-size: 40px;
+    font-family: var(--letra1);
+    color:  #c120e4;
+    /* toodo lo que se salga de la caja se esconde */
+    overflow: hidden;
+}
+
+.cuadrado__texto{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f49bf4ba;
+    /* escala es el tamaño obtenido de un centro  */
+    transform: scale(0) rotate(180deg);
+    transition: all 0.3s ease-in-out;
+}
+
+.img1:hover > .cuadrado__texto{
+    transform: scale(1) rotate(360deg);
+}
+.img2:hover > .cuadrado__texto{
+    transform: scale(1) rotate(360deg);
+}
+.img3:hover > .cuadrado__texto{
+    transform: scale(1) rotate(360deg);
+}
+.img1{
+    background-image: url(./img/IMG_0172.JPG);
+    background: /* linear-gradient(
+        rgba(173, 170, 170, 0.824),
+        rgba(174, 170, 170, 0.532)), */
+        url(./img/IMG_0172.JPG);
+  
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translateX(150%);
+    animation: about-img-animation 1s ease-in-out forwards;
+}
+
+.img2{
+    background-image: url(./img/moño\ coquette.jpg);
+    background: /* linear-gradient(
+        rgba(173, 170, 170, 0.824),
+        rgba(174, 170, 170, 0.532)), */
+        url(./img/moño\ coquette.jpg);
+  
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translateX(150%);
+    animation: about-img-animation 1s ease-in-out forwards;
+}
+
+.img3{
+    background-image: url(./img/IMG_7863.JPG);
+    background: /* linear-gradient(
+        rgba(173, 170, 170, 0.824),
+        rgba(174, 170, 170, 0.532)), */
+        url(./img/IMG_7863.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: translateX(150%);
+    animation: about-img-animation 1s ease-in-out forwards;
+}
+
+@keyframes about-img-animation{
+    100%{
+        transform: translateX(0);
+    }
+}
+.contenedor-nosotros{
+    width: 90%;
+    /* margin crea un espacio extra alrededor de un elemento */
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    gap:50px;
+    margin-top: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+
+
+}
+.nosotros-inf{
+    width: 45%;
+    min-width: 450px;
+   
+
+
+}
+.nosotros-inf p{
+    text-align: justify;
+}
+.nosotros-img{
+    width: 30%;
+    max-width: 470px;
+    min-width: 450px;
+
+}
+.img-nosotros{
+    width: 100%;
+}
+.nosotros-inf h2{
+    font-family: var(--letra1);
+    margin-bottom: 40px;
+    color: #c120e4;
+    font-size: 50px;
+    text-align: center;
+}
+.nosotros-inf p{
+    font-size: 15px;
+    font-family: var(--letra);
+
+}
+.fondo-nosotros{
+    background-color: #f6c2f6f8;
+    padding: 20px 0px 100px;
+    
+    
+}
+/* //////////////////////////////////////////////////////////// */
+.container_mvo {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 20px 0;
+}
+.text_mvo h2{
+    font-family: var(--letra1);
+    margin-bottom: 40px;
+    color: #c120e4;
+    font-size: 50px;
+    text-align: center;
+}
+.section {
+  width: 30%;
+  background-color: #f7edf8f3;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.section h2 {
+  color: #81149a;
+  margin-top: 0;
+}
+
+.section p {
+  color: #555;
+  line-height: 1.5;
+}
+
+.section ul {
+  color: #555;
+  padding-left: 20px;
+}
+
+.section li {
+  margin-bottom: 10px;
+}
+/* ////////////////////////////////////////////////////// */
+.ayudas-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.ayuda {
+  width: 48%;
+  background-color: #e26beb2d;
+  padding: 25px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.ayuda h3 {
+ font-family: var(--letra1);
+  color: #333;
+  margin-top: 0;
+}
+
+.ayuda p {
+  font-family: var(--letra4);  
+  color: #555;
+  line-height: 2;
+}
+
+.app-inventor-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-inventor-container a {
+  display: inline-block;
+  background-color: #c120e4;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.scratch-container a {
+  display: inline-block;
+  background-color: #c120e4;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.app-inventor-container a:hover {
+  background-color: #d96df1;
+}
+
+.qr-code {
+  width: 100px;
+  height: 100px;
+}
+
+
+
+
+
+.contenedor-footer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+
+
+}
+.column-footer{
+    width: 25%;
+    max-width: 400px;
+    min-width: 200px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 25px;
+    font-family: var(--letra);
+    color: #610475;
+    align-items: center;
+}
+.redes{
+
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    margin-top: 25px;
+    
+}
+.column-footer p{
+    font-family: var(--letra);
+    font-size: 15px;
+    color: black;
+}
+.face-footer{
+    font-size: 30px;
+    color: #bc05dc;
+}
+.fondo-footer{
+    background-color:#efa2f5e0;
+    padding: 1px 0px 10px;
+}
+.texto{
+    margin-top: 20px;
+}
+.talen-coex{
+    text-align: center;
+    font-size: 17px;
+    font-family: var(--letra);
+    background-color: #ffc4c4c5;
+
+}
+.talen-coex p{
+    margin-bottom: 0;
+}
+@media (max-width:900px){
+    .banner{
+        height: 50vh;
+    }
+}
+
+
+@media (max-width: 600px){
+    .contenedorCuadros{
+        flex-direction: column;
+        align-items: center;
+        
+        
+        
+    }
+    .cuadrado{
+        width: 100%;
+    }
+    .caja1{
+        width: 100%;
+        padding: 5px; 
+        gap: 10px;
+        
+    }
+    .menuPrincipal li a{
+        padding: 5px;
+    }
+    .banner-text h3{
+        letter-spacing: 40px;
+        font-size: 70px ;
+    }
+    .nosotros-inf{
+        min-width: 0;
+        
+    }
+}
+
+@media (max-width:500px){
+    .banner{
+        height: 30vh;
+    }
+}
+
+
+
+
+
+
+
